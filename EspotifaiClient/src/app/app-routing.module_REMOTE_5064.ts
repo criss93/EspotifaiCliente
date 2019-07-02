@@ -8,7 +8,6 @@ const routes: Routes = [
 { path:'', component:LoginComponent},
 {path:'myPlaylists', component:UserPageComponent, canActivate: [AuthGuard]},
 { path: '**', redirectTo: '' }
-
 ];
 
 @NgModule({
