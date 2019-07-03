@@ -1,1 +1,8 @@
-<p>user-page works!</p>
+<p>Welcome!</p>
+<div>
+<table class="table table-striped">
+    <tr *ngFor='let playlistName of playlists'>
+        <td>{{ playlistName }}</td>
+    </tr>
+</table>
+</div>

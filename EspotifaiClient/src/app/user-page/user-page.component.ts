@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlaylistsService } from '../services/playlists.service';
 
 @Component({
   selector: 'app-user-page',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-page.component.css']
 })
 export class UserPageComponent implements OnInit {
+  playlists: string[];
 
-  constructor() { }
+  constructor(private playlistsService: PlaylistsService) { }
 
   ngOnInit() {
+    this.playlistsService.getPlaylists().subscribe(p => {
+      this.playlists = p.playlists;
+    });
   }
 
 }
