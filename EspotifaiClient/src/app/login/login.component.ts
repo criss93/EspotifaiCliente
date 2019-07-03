@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Router, ActivatedRoute } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
 import { first } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-login',
@@ -10,6 +12,7 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   loginForm: FormGroup;
   loading = false;
   submitted = false;
@@ -52,12 +55,13 @@ export class LoginComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate([this.returnUrl]);
+          this.router.navigateByUrl('/myPlaylists');
         },
         error => {
           this.error = error;
           this.loading = false;
         });
+
   }
 
 }
