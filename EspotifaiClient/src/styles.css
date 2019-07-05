@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 10%;
+  border-radius: 20%;
+}
+img.avatar2 {
+	width: 20%;
+}

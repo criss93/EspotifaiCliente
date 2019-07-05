@@ -1,8 +1,15 @@
-<p>Welcome!</p>
-<div>
-<table class="table table-striped">
-    <tr *ngFor='let playlistName of playlists'>
-        <td>{{ playlistName }}</td>
-    </tr>
-</table>
+<body>
+
+<div class="container">
+	<p><strong>Tus Playlists</strong></p>
+	<div>
+		<table class="excelDataTable"  border="1" cellpadding="2" cellspacing="0" bordercolor="#4CAF50" border="8">
+    		<tr *ngFor='let playlistName of playlists'>
+    			<td><strong>Nombre:</strong></td>
+        		<td align="center">{{ playlistName }}</td>
+    		</tr>
+		</table>
+	</div>
 </div>
+
+</body>

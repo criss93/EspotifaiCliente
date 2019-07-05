@@ -13,7 +13,7 @@ export class UserPageComponent implements OnInit {
 
   ngOnInit() {
     this.playlistsService.getPlaylists().subscribe(p => {
-      this.playlists = p.playlists;
+        this.playlists = p.playlists;
     });
   }
 
